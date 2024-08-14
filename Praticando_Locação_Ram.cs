@@ -31,5 +31,23 @@ class Do_Zero
             decimal salario_bruto =(horas_trabalhadas * taxa_pagamento) + comissao_recebidas;
     
             Console.WriteLine($"O salário bruto do funcionário {nome_funcionario} é: {salario_bruto}");
+
+            /*    versao com double
+                Console.Write("Digite o nome do Funcionário: ");
+                string nome_funcionario = Console.ReadLine();
+                
+                Console.Write("Digite as Horas Trabalhadas do funcionário " + nome_funcionario + " : ");
+                int horas_trabalhadas = Convert.ToInt32(Console.ReadLine());
+                
+                Console.Write("Digite a taxa de pagamento por hora do seu trabalho: ");
+                double taxa_pagamento = Convert.ToDouble(Console.ReadLine());
+                
+                Console.Write("Digite o Valor das suas Comissões recebidas: ");
+                decimal comissao_recebidas = Convert.ToDecimal(Console.ReadLine());
+                
+                decimal salario_bruto = (decimal)(horas_trabalhadas * taxa_pagamento) + comissao_recebidas;
+                
+                Console.WriteLine($"O salário bruto do funcionário {nome_funcionario} é: {salario_bruto}");
+            */
     }
 }
