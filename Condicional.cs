@@ -1,6 +1,6 @@
 using System;
 
-class Do_Zero
+class Condicao
 {
     static void Main()
     {
