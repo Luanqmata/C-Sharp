@@ -14,6 +14,11 @@ public class Program
             if (numero == 0)
             {
                 quebra_loop = true;
+            }else if (numero == 5)
+            {
+                long fatorial = CalcularFatorial(numero);
+                Console.WriteLine($"O fatorial de {numero} é: {fatorial}");
+                Console.WriteLine("\nO nome do nosso professor é ROMES.");
             }
             else if (numero == 4)
             {
