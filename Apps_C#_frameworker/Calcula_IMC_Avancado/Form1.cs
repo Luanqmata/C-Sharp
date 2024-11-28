@@ -40,7 +40,7 @@ namespace Calcula_IMC
             dataGridView1.Columns[2].Width = 100;
             dataGridView1.Columns[3].Width = 80;
             dataGridView1.Columns[4].Width = 75;
-            dataGridView1.Columns[5].Width = 75;
+            dataGridView1.Columns[5].Width = 70;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -50,43 +50,67 @@ namespace Calcula_IMC
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count >= 22)
+            {
+                MessageBox.Show("O limite de 21 credenciais foi atingido.");
+                return; 
+            }
+
             if (float.TryParse(textBox1.Text, out float peso) &&
                 float.TryParse(textBox2.Text, out float altura) &&
                 altura > 0)
             {
-                float imc = peso / (altura * altura);
+                string nome = textBox3.Text;
 
-                label5.Text = $"{imc:F2}";
-
-                string resultado;
-                string qualificacao;
-
-                if (imc < 18.5)
+                try
                 {
-                    resultado = "Você está abaixo do peso. ⚠️";
-                    qualificacao = "Abaixo/peso";
-                }
-                else if (imc >= 18.5 && imc < 25)
-                {
-                    resultado = "Você está com o peso normal. 🎯";
-                    qualificacao = "Normal";
-                }
-                else if (imc >= 25 && imc < 30)
-                {
-                    resultado = "Você está com sobrepeso. 🔔";
-                    qualificacao = "Acima/Peso";
-                }
-                else
-                {
-                    resultado = "Você está com obesidade. 🚨";
-                    qualificacao = "Obesidade";
-                }
-                label6.Text = resultado;
+                    if (string.IsNullOrWhiteSpace(nome))
+                    {
+                        throw new ArgumentException("O nome não pode ser vazio ou conter apenas espaços em branco.");
+                    }
 
+                    if (nome.Any(c => !Char.IsLetter(c)))
+                    {
+                        throw new ArgumentException("O nome não pode conter números ou caracteres especiais.");
+                    }
 
-                dataGridView1.Rows.Add(Id_pessoa, peso.ToString("F2"), altura.ToString("F2"), imc.ToString("F2"), textBox3.Text, qualificacao);
+                    float imc = peso / (altura * altura);
 
-                Id_pessoa++;
+                    label5.Text = $"{imc:F2}";
+
+                    string resultado;
+                    string qualificacao;
+
+                    if (imc < 18.5)
+                    {
+                        resultado = "Você está abaixo do peso. ⚠️";
+                        qualificacao = "Abaixo/peso";
+                    }
+                    else if (imc >= 18.5 && imc < 25)
+                    {
+                        resultado = "Você está com o peso normal. 🎯";
+                        qualificacao = "Normal";
+                    }
+                    else if (imc >= 25 && imc < 30)
+                    {
+                        resultado = "Você está com sobrepeso. 🔔";
+                        qualificacao = "Acima/Peso";
+                    }
+                    else
+                    {
+                        resultado = "Você está com obesidade. 🚨";
+                        qualificacao = "Obesidade";
+                    }
+                    label6.Text = resultado;
+
+                    dataGridView1.Rows.Add(Id_pessoa, peso.ToString("F2"), altura.ToString("F2"), imc.ToString("F2"), nome, qualificacao);
+
+                    Id_pessoa++;
+                }
+                catch (ArgumentException ex)
+                {
+                    MessageBox.Show($"Erro: {ex.Message}");
+                }
             }
             else
             {
@@ -125,7 +149,11 @@ namespace Calcula_IMC
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (dataGridView1.Rows.Count >= 21)
+            {
+                MessageBox.Show("O limite de 21 credenciais foi atingido.");
+                return;
+            }
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -370,6 +398,12 @@ namespace Calcula_IMC
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.Rows.Count >= 22)
+            {
+                MessageBox.Show("O limite de 21 credenciais foi atingido.");
+                return;
+            }
+
             Random random = new Random();
 
             float pesoAleatorio = (float)(random.Next(40, 120) + random.NextDouble()); 
@@ -377,7 +411,7 @@ namespace Calcula_IMC
 
             float imc = pesoAleatorio / (alturaAleatoria * alturaAleatoria);
 
-            string[] nomes = { "Romes", "Sandir", "Juliana", "joão", "Cauê", "Luan", "Pedro", "Pablo", "Daniela", "Rafaela","Habert","Veronica","Thiago","luis","Vitor","Daniel","Gabi","Gabriel","Jonas","Cida","Ivone" };
+            string[] nomes = { "Romes", "Sandir", "Juliana", "joão", "Cauê", "Luan", "Pedro", "Pablo", "Daniela", "Rafaela","Habert","Veronica","Thiago","luis","Vitor","Daniel","Gabi","Gabriel","Jonas","Cida","Ivone","Kaic","Paulo","Gabriela","Thaina","Não posso morrer!" };
             string nomeAleatorio = nomes[random.Next(nomes.Length)];
 
             string qualificacao;
