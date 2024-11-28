@@ -1,3 +1,3 @@
 # Imagem do Aplicativo
 
-![image](https://github.com/user-attachments/assets/0a6e5ad0-da01-4313-844a-f07b92bfcfda)
+![image](https://github.com/user-attachments/assets/d4e6c008-b6e5-4570-947d-a0708dd2bf03)
