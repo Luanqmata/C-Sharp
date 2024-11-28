@@ -192,7 +192,7 @@ namespace Calcula_IMC
             }
             else
             {
-                MessageBox.Show("Por favor, marque uma checkbox para excluir um ou mais registros.");
+                MessageBox.Show("Nenhuma Check Box Marcada , Marque uma para remover");
             }
         }
 
@@ -211,7 +211,7 @@ namespace Calcula_IMC
             }
             else
             {
-                MessageBox.Show("Não há registros suficientes para excluir.");
+                MessageBox.Show("Não Há Nada Armazenado ali, Marque uma Check Box que contenha alguma Informação.");
             }
         }
 
@@ -377,7 +377,7 @@ namespace Calcula_IMC
 
             float imc = pesoAleatorio / (alturaAleatoria * alturaAleatoria);
 
-            string[] nomes = { "Romes", "Sandir", "Juliana", "joão", "Cauê", "Luan", "Pedro", "Pablo", "Daniela", "Rafaela" };
+            string[] nomes = { "Romes", "Sandir", "Juliana", "joão", "Cauê", "Luan", "Pedro", "Pablo", "Daniela", "Rafaela","Habert","Veronica","Thiago","luis","Vitor","Daniel","Gabi","Gabriel","Jonas","Cida","Ivone" };
             string nomeAleatorio = nomes[random.Next(nomes.Length)];
 
             string qualificacao;
