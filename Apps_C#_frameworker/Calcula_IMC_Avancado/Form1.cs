@@ -120,17 +120,29 @@ namespace Calcula_IMC
 
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            textBox3.Text = "";
-            label6.Text = "";
-            label5.Text = "";
+            try
+            {
+                if (dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Visible) == 0)
+                {
+                    throw new InvalidOperationException("Não há nada para remover, adicione algum registro.");
+                }
 
-            // Limpa os dados do DataGridView
-            dataGridView1.Rows.Clear();
-            DesmarcarTodasCheckboxes();
-            Id_pessoa = 1;
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                label6.Text = "";
+                label5.Text = "";
+
+                dataGridView1.Rows.Clear();
+                DesmarcarTodasCheckboxes();
+                Id_pessoa = 1;
+            }
+            catch (InvalidOperationException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
