@@ -52,7 +52,7 @@ namespace Calcula_IMC
         {
             if (dataGridView1.Rows.Count >= 22)
             {
-                MessageBox.Show("O limite de 21 credenciais foi atingido.");
+                MessageBox.Show("O limite de 20 credenciais foi atingido.");
                 return; 
             }
 
@@ -161,9 +161,9 @@ namespace Calcula_IMC
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridView1.Rows.Count >= 21)
+            if (dataGridView1.Rows.Count >= 21) 
             {
-                MessageBox.Show("O limite de 21 credenciais foi atingido.");
+                MessageBox.Show("O limite de 20 credenciais foi atingido.");
                 return;
             }
         }
@@ -412,7 +412,7 @@ namespace Calcula_IMC
         {
             if (dataGridView1.Rows.Count >= 22)
             {
-                MessageBox.Show("O limite de 21 credenciais foi atingido.");
+                MessageBox.Show("O limite de 20 credenciais foi atingido.");
                 return;
             }
 
@@ -433,15 +433,26 @@ namespace Calcula_IMC
             }
             else if (imc >= 18.5 && imc < 25)
             {
-                qualificacao = "Normal";
+                qualificacao = "IMC Normal";
             }
             else if (imc >= 25 && imc < 30)
             {
-                qualificacao = "Gordo";
+                qualificacao = "Acima Peso";
             }
             else
             {
-                qualificacao = "Gordão";
+                if (imc >= 30 && imc < 35)
+                {
+                    qualificacao = "Obeso I";
+                }
+                else if (imc >= 35 && imc < 40)
+                {
+                    qualificacao = "Obeso II";
+                }
+                else
+                {
+                    qualificacao = "Obeso III";
+                }
             }
 
             dataGridView1.Rows.Add(Id_pessoa, pesoAleatorio.ToString("F2"), alturaAleatoria.ToString("F2"), imc.ToString("F2"), nomeAleatorio, qualificacao);
