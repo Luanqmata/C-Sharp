@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Calcula_IMC.exe" version="1.0.0.1" publicKeyToken="e3cc56a1c08f4bde" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Calcula_IMC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Calcula_IMC.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opções de Manifesto do UAC
+          Para alterar o nível de Controle de Conta de Usuário do Windows, substitua o nó
+          requestedExecutionLevel por um dos seguintes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Para utilizar a Virtualização de Arquivos e Registro para manter a compatibilidade com versões anteriores,
+         exclua o nó requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Calcula_IMC.exe" size="25048">
+      <assemblyIdentity name="Calcula_IMC" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>2itZXAMdcvGqkveXAuWrq55fhjGfLvyYx/ANJSY5PFI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Calcula_IMC.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-4P9155T\Luan" issuerKeyHash="55b951b3c371023489da23aa4822a0427203b350" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>D6py2saWOXBorx2tSo/biSw2PuTrrGeGYSagCD5Iur4=</DigestValue></Reference></SignedInfo><SignatureValue>bHeH/jwQeBcUQRWNw+yzJyIEc25yTLMS3qZIdaVJ86KTrw1jR7Hsb768OyFzwVKWoJbOVvZfDnUzpHMcRSrX76Fx/1EvJvhiUQ62ZVKWUVkfOYEjeTbd4hAszv75Y8vuZaUOOX3XLJdw2ZG4zCTOKrK8FLXgEx7pBMKDubeleGo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>wSAkEeL8WdMxj1SuKWrZK6qWWezvGUnl9ejGY6Pbq5Z46Ovp+GiYCtQ3D/b0ez4a8cjcjS/x0byCOjdtNtRNsOFXHw8KCcb8nXv+GxpNfiNOnkxbofH+jPZjhgLT33aeKADcQPU7rCl107ZcR7uL2cCCWR4PhFnS17TzIF4iBok=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="beba483e08a026618667acebe43e362c89db8f4aad1daf68703996c6da72aa0f" Description="" Url=""><as:assemblyIdentity name="Calcula_IMC.exe" version="1.0.0.1" publicKeyToken="e3cc56a1c08f4bde" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-4P9155T\Luan</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>ovhkqc1bV8VZO/S7zbiGwJHBCEaUqXInnxGhf9AlK2M=</DigestValue></Reference></SignedInfo><SignatureValue>nWYiLnR1A2oOhrg75R7zOuTI8hULjPjHZs1ro4fVfwQnr1D2SSVdet8avPMBdn90a2fcOZMUXCx889plMeVfB+vNdm+2EFBoHV94KJ0a2UVdKGmO0AJOoY0I3b5eoKc0FP+W7xX1gbuw11lbzJaqzU2drJElU7FmOkYx+4wY6E0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>wSAkEeL8WdMxj1SuKWrZK6qWWezvGUnl9ejGY6Pbq5Z46Ovp+GiYCtQ3D/b0ez4a8cjcjS/x0byCOjdtNtRNsOFXHw8KCcb8nXv+GxpNfiNOnkxbofH+jPZjhgLT33aeKADcQPU7rCl107ZcR7uL2cCCWR4PhFnS17TzIF4iBok=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB6TCCAVKgAwIBAgIQEsr7ZELXxYxA68P0cG+DMjANBgkqhkiG9w0BAQsFADAzMTEwLwYDVQQDHigARABFAFMASwBUAE8AUAAtADQAUAA5ADEANQA1AFQAXABMAHUAYQBuMB4XDTI0MDkyNDA0NTkzM1oXDTI1MDkyNDEwNTkzM1owMzExMC8GA1UEAx4oAEQARQBTAEsAVABPAFAALQA0AFAAOQAxADUANQBUAFwATAB1AGEAbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwSAkEeL8WdMxj1SuKWrZK6qWWezvGUnl9ejGY6Pbq5Z46Ovp+GiYCtQ3D/b0ez4a8cjcjS/x0byCOjdtNtRNsOFXHw8KCcb8nXv+GxpNfiNOnkxbofH+jPZjhgLT33aeKADcQPU7rCl107ZcR7uL2cCCWR4PhFnS17TzIF4iBokCAwEAATANBgkqhkiG9w0BAQsFAAOBgQC9x3zaJj9p5Qm6CkddM27K9s4TJOt2ADiSTKphiLuBs1mBKJcIxfS8RmVQXsx8V0SOIVX+0vCBHzi1KbcXdKQ938fs+BBZarRwRDw4vEZegwcT3V3PVzT+ullrgGY4i/38L2QONvDi6qjhMMFATD3SAAtvhr2spvNtdQkkKq4S7w==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
