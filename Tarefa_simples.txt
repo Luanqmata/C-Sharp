@@ -1,0 +1,43 @@
+Atividade de C# para Iniciantes
+Objetivo: Aprender e praticar os fundamentos de C# como sintaxe, tipos de dados, estruturas de controle e manipulação de strings.
+
+Questão 1: "Hello, World!"
+Crie um programa em C# que exiba a mensagem "Hello, World!" no console.
+
+Questão 2: Operações Matemáticas
+Crie um programa que:
+
+Solicite dois números inteiros ao usuário.
+Calcule e exiba a soma, subtração, multiplicação e divisão desses números.
+Questão 3: Estrutura Condicional
+Escreva um programa que peça ao usuário um número inteiro e verifique:
+
+Se o número é par, exiba "O número é par".
+Caso contrário, exiba "O número é ímpar".
+Questão 4: Estrutura de Repetição
+Crie um programa que exiba os números de 1 a 10 usando um loop for.
+
+Questão 5: Tabuada
+Peça ao usuário um número inteiro e exiba a tabuada desse número de 1 a 10 usando um loop while.
+
+Questão 6: Manipulação de Strings
+Escreva um programa que solicite uma palavra ao usuário e:
+
+Exiba a palavra em letras maiúsculas.
+Exiba o número de caracteres dessa palavra.
+Questão 7: Vetores (Arrays)
+Crie um programa que armazene os nomes de 5 frutas em um vetor e exiba todos os nomes no console.
+
+Questão 8: Funções
+Implemente uma função chamada Somar que receba dois números inteiros como parâmetros e retorne a soma deles. Use essa função em um programa principal para exibir o resultado da soma de dois números fornecidos pelo usuário.
+
+Questão 9: Classe e Objeto
+Crie uma classe chamada Carro com as seguintes propriedades:
+
+Marca (string)
+Modelo (string)
+Ano (int)
+No programa principal, crie um objeto da classe Carro, atribua valores às suas propriedades e exiba essas informações no console.
+
+Questão 10: Tratamento de Erros
+Escreva um programa que solicite um número ao usuário e trate possíveis erros caso o usuário insira um valor inválido (exemplo: texto em vez de número). Use o bloco try-catch para tratar a exceção e exibir uma mensagem adequada.
